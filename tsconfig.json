@@ -17,10 +17,10 @@
     ],
     "paths": {
       "angular-cesium": [
-        "projects/angular-cesium/dist"
+        "dist/angular-cesium"
       ],
       "angular-cesium/*": [
-        "projects/angular-cesium/dist/*"
+        "dist/angular-cesium/*"
       ],
       "core-js/es7/reflect": [
         "node_modules/core-js/proposals/reflect-metadata"

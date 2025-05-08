@@ -28,7 +28,7 @@
     "lint": "npx eslint -c ./eslint.config.mjs ./projects/angular-cesium/src/lib/angular-cesium",
     "e2e": "ng e2e",
     "gh-pages": "gh-pages -d docs -b gh-pages",
-    "copy:extra-files": "cp README.md LICENSE.txt projects/angular-cesium/dist/",
+    "copy:extra-files": "cp README.md LICENSE.txt dist/angular-cesium/",
     "schemnantics:build": "cd projects/angular-cesium && yarn build",
     "docs:run": "compodoc -p projects/angular-cesium/src/lib/tsconfig.compodoc.json --theme stripe -d docs -n \"Angular Cesium\" --watch --serve",
     "docs:compile": "rimraf docs && compodoc -p projects/angular-cesium/src/lib/tsconfig.compodoc.json --theme stripe -d docs -n \"Angular Cesium\"",

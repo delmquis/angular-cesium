@@ -5,7 +5,7 @@ import { EditActions,
   PointEditorObservable,
   PointEditUpdate,
   PointsEditorService
-} from '../../../../../../angular-cesium/dist';
+} from 'angular-cesium';
 
 @Component({
   selector: 'points-editor-example',

@@ -1,7 +1,9 @@
 # Angular-Cesium
 <img src="https://preview.ibb.co/cpDuwF/angular_cesium.png" width=150 alt="Drawing" style="margin:10"/>
 
-**This is a fork of Articode's "angular-cesium", adapted for Angular v18 [Angular Cesium](https://github.com/articodeltd/angular-cesium)**
+**This is a fork of AuScope's fork of Articode's "angular-cesium", adapted for Angular v18 [Angular Cesium](https://github.com/articodeltd/angular-cesium)**
+
+**Thank you to AuScope for upgrading to Angular v18 [Angular Cesium](https://github.com/AuScope/angular-cesium)**
 
 **NB: Building schematics will fail because @compodoc/compodoc v1.1.19 only supports Angular v13, but the latest unreleased code changes do support v15.**
 
