@@ -2,7 +2,7 @@
   "name": "@delmquis/angular-cesium",
   "version": "19.2.10",
   "license": "MIT",
-  "description": "Angular v18 library for working with Cesium, fork of https://github.com/articodeltd/angular-cesium.",
+  "description": "Angular v19 library for working with Cesium, fork of https://github.com/articodeltd/angular-cesium.",
   "repository": {
     "type": "git",
     "url": "https://github.com/delmquis/angular-cesium.git",
