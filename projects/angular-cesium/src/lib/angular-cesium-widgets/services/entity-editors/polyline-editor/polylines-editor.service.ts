@@ -20,7 +20,6 @@ import { EditPolyline } from '../../../models';
 import { LabelProps } from '../../../models/label-props';
 import { debounce, generateKey } from '../../utils';
 import { CesiumService } from '../../../../angular-cesium';
-import { when } from 'when';
 
 export const DEFAULT_POLYLINE_OPTIONS: PolylineEditOptions = {
   addPointEvent: CesiumEvent.LEFT_CLICK,
@@ -133,7 +132,7 @@ export class PolylinesEditorService {
       } else {
         const cartographics = points.map(point => this.coordinateConverter.cartesian3ToCartographic(point.getPosition()));
         const promise = sampleTerrain(this.cesiumScene.terrainProvider, 11, cartographics);
-        when(promise, function (updatedPositions) {
+        promise.then((updatedPositions) => {
           points.forEach((point, index) => {
             point.setPosition(Cartographic.toCartesian(updatedPositions[index]));
           });

@@ -21,7 +21,6 @@ import { ClampTo3DOptions } from '../../../models/polyline-edit-options';
 import { PointProps } from '../../../models/point-edit-options';
 import { LabelProps } from '../../../models/label-props';
 import { debounce, generateKey } from '../../utils';
-import { when } from 'when';
 
 export const DEFAULT_POLYGON_OPTIONS: PolygonEditOptions = {
   addPointEvent: CesiumEvent.LEFT_CLICK,
@@ -148,10 +147,12 @@ export class PolygonsEditorService {
       } else {
         const cartographics = points.map(point => this.coordinateConverter.cartesian3ToCartographic(point.getPosition()));
         const promise = sampleTerrain(this.cesiumScene.terrainProvider, 11, cartographics);
-        when(promise, (updatedPositions) => {
+        promise.then((updatedPositions) => {
           points.forEach((point, index) => {
             point.setPosition(Cartographic.toCartesian(updatedPositions[index]));
           });
+        }).catch((error) => {
+          console.error('Error clamping points to terrain:', error);
         });
       }
     }
